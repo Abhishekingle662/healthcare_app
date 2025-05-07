@@ -1,5 +1,6 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, Button, View } from 'react-native';
+import { router, Href } from 'expo-router';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -16,7 +17,16 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-      
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText type="title">Welcome!</ThemedText>
+        <HelloWave />
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Navigate to:</ThemedText>
+        <Button title="Chat with AI Assistant" onPress={() => router.push('/(tabs)/chat' as Href)} />
+        <View style={styles.buttonSpacer} /> 
+        <Button title="Go to Settings" onPress={() => router.push('/(tabs)/settings' as Href)} />
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
@@ -37,5 +47,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
+  },
+  buttonSpacer: {
+    marginVertical: 8, // Adds space between buttons
   },
 });
