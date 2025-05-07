@@ -1,3 +1,17 @@
+## Plan to build the app:
+
+| Hour  | Milestone                                                                  |
+|-------|----------------------------------------------------------------------------|
+| 0-4   | Scaffold React Native UI; add basic chat UI                                |
+| 4-8   | Compile quantized Llama-3 & wrap with simple inference API                 |
+| 8-16  | Implement LoRA fine-tuning pipeline on sample data                         |
+| 16-24 | Add sentiment filter + 988 emergency button                                |
+| 24-30 | Usage-cap timer & local storage of streaks                                 |
+| 30-36 | Friend-nudger rule engine                                                  |
+| 36-44 | Polish UI, gradient branding showing "offline first"                       |
+| 44-48 | Live demo: simulate user, show crisis escalation, show LoRA adapting slang |
+
+
 # Healthcare Companion App Development Log
 
 ## Features Implemented
@@ -14,6 +28,7 @@
 - Built basic chat UI with message bubbles
 - Added text input field with send button
 - Implemented mock AI responses
+- Added a voice mode button with a simple animation
 
 ### Theme System
 - Added support for Light, Dark, and System themes
@@ -32,5 +47,8 @@
 - Medication reminders
 
 ---
+
+
+# Task 01 has completed at this point.
 
 *Last updated: May 6, 2025*
